@@ -357,16 +357,53 @@ footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--mu
           </figure>
         </div>
       </article>
+      <article class="feature">
+        <div class="os">Linux / BSD · Samba AD</div>
+        <h3>Infosüsteem ettevõttele Eesti AS</h3>
+        <p>Ehitasin kooli Proxmoxi keskkonda väikese ettevõtte infosüsteemi avatud lähtekoodiga tarkvaraga. Töötajad kasutavad ühte domeenikontot nii Windowsi arvutis kui ka ettevõtte veebiteenustes.</p>
+        <ul class="did">
+          <li>OPNsense ruuter ja tulemüür, sisevõrk 10.11.12.0/24</li>
+          <li>Samba AD domeenikontroller (puuorg.local) koos DNS-iga kõigile serveritele</li>
+          <li>Samba failiserver kolme jagatud kaustaga (Juhatus, Eesti, Avalik) grupipõhiste õigustega</li>
+          <li>Windows 11 tööjaam domeenis: võrgukettad ja taustapilt rühmapoliitikaga, haldus RSAT-iga</li>
+          <li>Wiki.js, Nextcloud ja Rocket.Chat ühendatud AD-ga üle LDAP-i; wikis kasutusjuhendid kõigi teenuste kohta</li>
+          <li>Veaotsing: Rocket.Chat ei lasknud AD kasutajat sisse, sest kontol puudus e-posti väli. Leidsin põhjuse serveri logist ja lahendasin selle LDAP-i vaikedomeeni seadistusega.</li>
+        </ul>
+        <ul class="chips" aria-label="Kasutatud tehnoloogiad">
+          <li>OPNsense</li><li>Samba AD</li><li>DNS</li><li>Samba failiserver</li><li>GPO / RSAT</li><li>LDAP</li><li>Wiki.js</li><li>Nextcloud</li><li>Rocket.Chat</li><li>Proxmox</li>
+        </ul>
+        <div class="shots">
+          <figure class="shot">
+            <button type="button" data-full="images/linux-opnsense.png" data-cap="OPNsense ruuter: sisevõrk 10.11.12.1/24, WAN saab aadressi DHCP-ga" aria-label="Ava suuremalt: OPNsense ruuter: sisevõrk 10.11.12.1/24, WAN saab aadressi DHCP-ga"><img src="images/linux-opnsense.png" alt="OPNsense ruuter: sisevõrk 10.11.12.1/24, WAN saab aadressi DHCP-ga" loading="lazy"></button>
+            <figcaption>OPNsense ruuter: sisevõrk 10.11.12.1/24, WAN saab aadressi DHCP-ga</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" data-full="images/linux-dns.png" data-cap="Domeenikontrolleri DNS: kõik serverid oma nimede ja aadressidega" aria-label="Ava suuremalt: Domeenikontrolleri DNS: kõik serverid oma nimede ja aadressidega"><img src="images/linux-dns.png" alt="Domeenikontrolleri DNS: kõik serverid oma nimede ja aadressidega" loading="lazy"></button>
+            <figcaption>Domeenikontrolleri DNS: kõik serverid oma nimede ja aadressidega</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" data-full="images/linux-smb.png" data-cap="Failiserveri smb.conf: kolm jagatud kausta grupipõhiste õigustega" aria-label="Ava suuremalt: Failiserveri smb.conf: kolm jagatud kausta grupipõhiste õigustega"><img src="images/linux-smb.png" alt="Failiserveri smb.conf: kolm jagatud kausta grupipõhiste õigustega" loading="lazy"></button>
+            <figcaption>Failiserveri smb.conf: kolm jagatud kausta grupipõhiste õigustega</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" data-full="images/linux-netuse.png" data-cap="Domeenikasutaja martin: kolm võrguketast ühendatud rühmapoliitikaga" aria-label="Ava suuremalt: Domeenikasutaja martin: kolm võrguketast ühendatud rühmapoliitikaga"><img src="images/linux-netuse.png" alt="Domeenikasutaja martin: kolm võrguketast ühendatud rühmapoliitikaga" loading="lazy"></button>
+            <figcaption>Domeenikasutaja martin: kolm võrguketast ühendatud rühmapoliitikaga</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" data-full="images/linux-rocket-ldap.png" data-cap="Rocket.Chati LDAP-seadistus: ühendus AD-ga õnnestus" aria-label="Ava suuremalt: Rocket.Chati LDAP-seadistus: ühendus AD-ga õnnestus"><img src="images/linux-rocket-ldap.png" alt="Rocket.Chati LDAP-seadistus: ühendus AD-ga õnnestus" loading="lazy"></button>
+            <figcaption>Rocket.Chati LDAP-seadistus: ühendus AD-ga õnnestus</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" data-full="images/linux-rocket-login.png" data-cap="AD kasutajaga martin sisse logitud Rocket.Chati" aria-label="Ava suuremalt: AD kasutajaga martin sisse logitud Rocket.Chati"><img src="images/linux-rocket-login.png" alt="AD kasutajaga martin sisse logitud Rocket.Chati" loading="lazy"></button>
+            <figcaption>AD kasutajaga martin sisse logitud Rocket.Chati</figcaption>
+          </figure>
+        </div>
+      </article>
       <div class="projects">
         <article class="project">
           <div class="os">Võrguprojekt <span class="tag">töös</span></div>
           <h3>Kolme asukohaga ettevõtte arvutivõrk</h3>
           <p>Kavandan 150 töötajaga ettevõttele turvalise ja töökindla võrgu: loogiline topoloogia, IP-aadresside plaan, seadmete valik, kaabeldus, eelarve ja riskianalüüs. Näidislahenduses seadistan OPNsense'i ruuterid, VLAN-id (haldus, tööjaamad, külalised, DMZ), tulemüürireeglid, OpenVPN-i kaugtööks, kontoritevahelise IPsec-tunneli ning sissetungituvastuse ja seire.</p>
-        </article>
-        <article class="project">
-          <div class="os">Linux / BSD <span class="tag">töös</span></div>
-          <h3>Sama lahendus Linuxi vahenditega</h3>
-          <p>Eesmärk sarnaneb Windowsi projektiga, kuid seekord kasutan Linuxi käske ja avatud lähtekoodiga tarkvara.</p>
         </article>
       </div>
     </div>
@@ -378,7 +415,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--mu
       <h2>Oskused</h2>
       <div class="skills">
         <div><h3>Operatsioonisüsteemid</h3><ul class="chips"><li>Windows</li><li>Windows Server</li><li>Ubuntu</li><li>Debian</li><li>CentOS</li><li>openSUSE (algteadmised)</li></ul></div>
-        <div><h3>Haldus</h3><ul class="chips"><li>Active Directory</li><li>Rühmapoliitikad</li><li>Kasutajahaldus</li><li>Failiserver</li><li>DHCP</li></ul></div>
+        <div><h3>Haldus</h3><ul class="chips"><li>Active Directory</li><li>Rühmapoliitikad</li><li>Kasutajahaldus</li><li>Failiserver</li><li>DHCP</li><li>Samba AD</li><li>LDAP</li><li>OPNsense</li></ul></div>
         <div><h3>Virtualiseerimine ja tööriistad</h3><ul class="chips"><li>Proxmox</li><li>Xen Orchestra</li><li>VMware</li><li>PuTTY</li></ul></div>
         <div><h3>Keeled</h3><ul class="chips"><li>eesti keel, emakeel</li><li>inglise keel, B2</li></ul></div>
       </div>
@@ -440,8 +477,8 @@ footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--mu
           <li>Võrgukettad ühenduvad kasutajatele automaatselt rühmapoliitika (GPO) kaudu.</li>
           <li>Seadistasin DHCP, NAT-i ja sertifitseerimiskeskuse (AD CS).</li>
         </ul></div>
-      <div class="term-row"><span class="t">Linux/BSD projekt · Ubuntu, Debian, CentOS</span><span class="d">töös</span>
-        <ul><li>Sama eesmärgiga lahendus Linuxi käskude ja avatud lähtekoodiga tarkvara baasil.</li></ul></div>
+      <div class="term-row"><span class="t">Infosüsteem ettevõttele Eesti AS · Linux/BSD</span><span class="d">2026</span>
+        <ul><li>Ehitasin OPNsense tulemüüri, Samba AD domeenikontrolleri ja failiserveriga infosüsteemi, kus Windows 11 tööjaam ja veebiteenused (Wiki.js, Nextcloud, Rocket.Chat) kasutavad AD kontosid.</li></ul></div>
       <div class="term-row"><span class="t">Võrguprojekt · OPNsense</span><span class="d">töös</span>
         <ul><li>Kolme asukohaga ettevõtte arvutivõrgu kavandamine: IP-plaan, VLAN-id, seadmete valik, eelarve ja riskianalüüs ning töötav näidislahendus tulemüürireeglite ja VPN-iga.</li></ul></div>
     </div>
@@ -463,7 +500,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--mu
       <h3>OSKUSED</h3>
       <dl class="term-kv">
         <dt>Operatsioonisüsteemid</dt><dd>Windows, Windows Server, Linux (Ubuntu, Debian, CentOS; algteadmised openSUSE-st)</dd>
-        <dt>Haldus</dt><dd>Active Directory, rühmapoliitikad, kasutajahaldus, failiserver, DHCP</dd>
+        <dt>Haldus</dt><dd>Active Directory, Samba AD, LDAP, OPNsense, rühmapoliitikad, kasutajahaldus, failiserver, DHCP</dd>
         <dt>Virtualiseerimine</dt><dd>Proxmox, Xen Orchestra, VMware</dd>
         <dt>Muu</dt><dd>PuTTY, riistvara, klienditeenindus, meeskonnatöö</dd>
         <dt>Keeled</dt><dd>eesti keel (emakeel), inglise keel (B2)</dd>
