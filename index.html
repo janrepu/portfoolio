@@ -3,236 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Janre Puuorg, IT-süsteemide spetsialisti eriala õpilane Tartu Rakenduslikus Kolledžis. Projektid, oskused, CV ja kontakt.">
+<title>Janre Puuorg · IT-süsteemide spetsialist</title>
+<meta name="description" content="Janre Puuorg – IT-süsteemide spetsialist. Arvutivõrgud, WiFi, Windows Server ja Linuxi taristu. Praegu IT-praktikal Kohila Vallavalitsuses.">
 <meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0f1c">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://janre.ee/">
+<meta property="og:title" content="Janre Puuorg · IT-süsteemide spetsialist">
+<meta property="og:description" content="Arvutivõrgud, WiFi, Windows Server ja Linuxi taristu. Projektid, praktika ja CV.">
+<meta property="og:image" content="https://janre.ee/images/og.png">
+<meta property="og:locale" content="et_EE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<title>Janre Puuorg</title>
-<script>try{var a=localStorage.getItem("jp-accent");if(a&&a!=="cyan")document.documentElement.setAttribute("data-accent",a)}catch(e){}</script>
-<link rel="icon" id="favicon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-body { margin: 0; }
-img { max-width: 100%; }
-[hidden] { display: none !important; }
-/* Layout: one narrow column of sections, each split into a mono "prompt" label rail and a content area; hero carries the name and a host-info fact strip. */
 :root {
   color-scheme: dark;
   --bg: #0a0f1c;
-  --surface: #111a2c;
-  --line: #22304b;
+  --surface: #0f1728;
+  --surface-2: #131d31;
+  --line: #1f2b42;
+  --line-2: #2a3856;
   --fg: #e7ecf4;
-  --muted: #93a1b8;
+  --muted: #95a3b9;
+  --faint: #6b7a93;
   --accent: #4fd6e8;
   --on-accent: #03161b;
   --ok: #5fd39a;
-  --no: #ef8a7c;
-  --shot-bg: #ffffff;
-  --term-bg: #080c17; --term-bar: #161f30; --term-line: #2a3856; --term-fg: #dfe6f1; --term-muted: #8e9cb4; --term-accent: var(--accent); --term-ok: #5fd39a;
   --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
 }
-:root[data-accent="amber"] { --accent: #f0b04c; --on-accent: #1a1304; }
-:root[data-accent="violet"] { --accent: #a99bff; --on-accent: #140c2e; }
-:root[data-accent="rose"] { --accent: #ff8fb8; --on-accent: #2a0816; }
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--body);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-}
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
 a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 p { margin: 0; }
-h1, h2, h3 { margin: 0; font-family: var(--display); text-wrap: balance; line-height: 1.1; }
-
-.wrap { max-width: 1040px; margin-inline: auto; padding-inline: 20px; }
+h1, h2, h3 { margin: 0; font-family: var(--display); text-wrap: balance; line-height: 1.12; font-weight: 700; }
+ul { margin: 0; }
+.wrap { max-width: 1080px; margin-inline: auto; padding-inline: 24px; }
+.mono { font-family: var(--mono); }
 
 /* Top bar */
-.bar {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-.bar .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 24px; padding-block: 12px; }
-.brand { font-family: var(--mono); font-size: 0.875rem; color: var(--fg); text-decoration: none; }
-.brand span { color: var(--accent); }
-.nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
-.nav a { font-size: 0.9rem; color: var(--muted); text-decoration: none; }
-.nav a:hover { color: var(--fg); }
+.bar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font-weight: 600; font-size: 0.95rem; white-space: nowrap; }
+.brand img { width: 26px; height: 26px; border-radius: 6px; }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a { font-size: 0.9rem; color: var(--muted); text-decoration: none; transition: color .15s; }
+.nav a:hover, .nav a.active { color: var(--fg); }
+.nav .nav-cv { color: var(--fg); border: 1px solid var(--line-2); border-radius: 6px; padding: 5px 12px; }
+.nav .nav-cv:hover { border-color: var(--accent); }
+.nav .m-only { display: none; }
 
-/* Hero */
-.hero { padding-block: 72px 56px; }
-.prompt { font-family: var(--mono); font-size: 0.875rem; color: var(--muted); }
-.prompt b { color: var(--ok); font-weight: 500; }
-.cursor { display: inline-block; width: 0.55em; height: 1.05em; background: var(--accent); vertical-align: text-bottom; animation: blink 1.1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .cursor { animation: none; } html { scroll-behavior: auto; } }
-h1 { font-size: clamp(2.75rem, 9vw, 5.5rem); font-weight: 700; letter-spacing: -0.03em; }
-.role { font-family: var(--display); font-weight: 500; font-size: clamp(1.2rem, 3vw, 1.6rem); color: var(--accent); }
-.motto { font-family: var(--mono); font-size: 0.95rem; color: var(--fg); }
-.lead { max-width: 62ch; color: var(--muted); font-size: 1.125rem; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
-.btn { display: inline-block; padding: 11px 20px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 1px solid var(--line); color: var(--fg); }
+/* Buttons */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 7px; font: 600 0.95rem/1.2 var(--body); text-decoration: none; border: 1px solid var(--line-2); color: var(--fg); background: transparent; cursor: pointer; transition: border-color .15s, filter .15s; }
 .btn:hover { border-color: var(--muted); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .btn.primary:hover { filter: brightness(1.08); }
+.link { color: var(--muted); font-weight: 500; font-size: 0.95rem; text-decoration: none; padding: 11px 4px; }
+.link:hover { color: var(--fg); }
 
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border: 1px solid var(--line); border-radius: 8px; background: var(--surface); margin: 0; overflow: hidden; }
-.facts div { padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; min-width: 0; box-shadow: 1px 0 0 var(--line), 0 1px 0 var(--line); }
-.facts dt { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.facts dd { margin: 0; font-weight: 500; }
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 56px; align-items: center; padding-block: 88px 56px; }
+.hero-main { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.avail { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+.avail i { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 20%, transparent); }
+h1 { font-size: clamp(2.8rem, 8vw, 5.2rem); letter-spacing: -0.035em; }
+.role { font-family: var(--display); font-weight: 500; font-size: clamp(1.25rem, 2.6vw, 1.6rem); color: var(--accent); letter-spacing: -0.01em; }
+.lead { max-width: 58ch; color: var(--muted); font-size: 1.125rem; }
+.lead strong { color: var(--fg); font-weight: 500; }
+
+.now { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 6px 22px; }
+.now h2 { font-family: var(--mono); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); padding: 14px 0 6px; }
+.now dl { margin: 0; }
+.now dl div { padding: 12px 0; border-top: 1px solid var(--line); display: grid; gap: 2px; }
+.now dt { font-size: 0.8rem; color: var(--faint); }
+.now dd { margin: 0; font-weight: 500; font-size: 0.98rem; line-height: 1.45; }
+.now dd span { display: block; color: var(--muted); font-weight: 400; font-size: 0.9rem; }
+
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+.stat { padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; box-shadow: 1px 0 0 var(--line); }
+.stat b { font-family: var(--display); font-size: 2.4rem; line-height: 1; letter-spacing: -0.03em; color: var(--fg); font-weight: 700; }
+.stat span { color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
 
 /* Sections */
-section { border-top: 1px solid var(--line); padding-block: 56px; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 20px 40px; scroll-margin-top: 64px; }
-.rail { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); }
-.rail::before { content: "$ "; color: var(--accent); }
-.body { display: flex; flex-direction: column; gap: 26px; min-width: 0; }
-h2 { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; }
-.prose { display: flex; flex-direction: column; gap: 14px; max-width: 65ch; }
+section { border-top: 1px solid var(--line); padding-block: 72px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 20px 48px; scroll-margin-top: 60px; }
+.rail { font-family: var(--mono); font-size: 0.8rem; color: var(--faint); padding-top: 10px; }
+.rail b { color: var(--accent); font-weight: 500; margin-right: 10px; }
+.body { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); letter-spacing: -0.02em; }
+.intro { color: var(--muted); max-width: 62ch; margin-top: -12px; }
+.prose { display: flex; flex-direction: column; gap: 14px; max-width: 64ch; }
+.prose p { color: var(--muted); }
+.prose strong { color: var(--fg); font-weight: 500; }
 
-.split { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 40px; }
-.split h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 12px; }
-.checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.checks li { display: grid; grid-template-columns: 1.4em minmax(0, 1fr); }
-.checks li::before { font-family: var(--mono); }
-.checks.yes li::before { content: "+"; color: var(--ok); }
-.checks.nope li::before { content: "–"; color: var(--no); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.card-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; }
+.card-head h3 { font-size: 1.5rem; letter-spacing: -0.01em; }
+.card-head .sub { color: var(--accent); font-weight: 500; margin-top: 4px; }
+.when { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag { display: inline-block; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border: 1px solid color-mix(in srgb, var(--ok) 60%, transparent); color: var(--ok); border-radius: 99px; margin-left: 10px; vertical-align: middle; font-weight: 500; }
+.card > p { color: var(--muted); max-width: 66ch; }
+.eyebrow { font-family: var(--mono); font-size: 0.74rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
 
-/* Timeline rows */
-.rows { display: flex; flex-direction: column; }
-.row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 24px; padding-block: 18px; border-top: 1px solid var(--line); }
-.row:first-child { border-top: 0; padding-top: 0; }
-.when { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 4px; }
-.row h3 { font-size: 1.15rem; font-weight: 500; }
-.row .sub { color: var(--accent); font-size: 0.95rem; }
-.row p { color: var(--muted); margin-top: 6px; max-width: 60ch; }
-.tag { display: inline-block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border: 1px solid var(--ok); color: var(--ok); border-radius: 99px; margin-left: 8px; vertical-align: middle; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px 28px; }
+.cols h4 { margin: 0 0 10px; font: 500 0.74rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+.did { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; color: var(--muted); font-size: 0.97rem; }
+.did li { position: relative; padding-left: 18px; }
+.did li::before { content: ""; position: absolute; left: 0; top: 0.68em; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); opacity: .8; }
+.did strong { color: var(--fg); font-weight: 500; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; }
+.chips li { font-family: var(--mono); font-size: 0.75rem; padding: 4px 10px; border: 1px solid var(--line-2); border-radius: 5px; color: var(--fg); }
+
+.other { display: flex; flex-direction: column; }
+.other-row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 4px 24px; padding: 18px 0; border-top: 1px solid var(--line); }
+.other-row:first-child { border-top: 0; }
+.other-row h3 { font-size: 1.1rem; font-weight: 500; }
+.other-row h3 span { color: var(--muted); font-family: var(--body); font-size: 0.95rem; }
+.other-row p { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+.label { font: 500 0.74rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 
 /* Projects */
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.project { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.project .os { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
-.project h3 { font-size: 1.2rem; font-weight: 500; }
-.project p { color: var(--muted); font-size: 0.98rem; }
-
-.feature { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-.feature h3 { font-size: 1.45rem; font-weight: 500; }
-.feature p { color: var(--muted); max-width: 65ch; }
-.feature .os { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
-.did { margin: 0; padding-left: 1.2em; color: var(--muted); display: flex; flex-direction: column; gap: 6px; max-width: 65ch; }
-.did li::marker { color: var(--accent); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
-.chips li { font-family: var(--mono); font-size: 0.75rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: 4px; color: var(--fg); }
-.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
-.shot { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.shot button { all: unset; cursor: zoom-in; display: block; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--shot-bg); aspect-ratio: 16 / 10; }
-.shot button:hover { border-color: var(--accent); }
-.shot button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
-.shot figcaption { font-size: 0.85rem; color: var(--muted); }
-dialog.viewer { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--surface); color: var(--fg); max-width: min(96vw, 1000px); }
-dialog.viewer::backdrop { background: rgba(4, 7, 12, 0.8); }
-dialog.viewer img { display: block; max-width: 100%; max-height: 76vh; margin-inline: auto; }
-dialog.viewer .cap { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 12px; font-size: 0.9rem; color: var(--muted); }
-
-dialog.term { padding: 0; border: 1px solid var(--term-line); border-radius: 10px; background: var(--term-bg); color: var(--term-fg); width: min(94vw, 840px); max-height: 88vh; font-family: var(--mono); font-size: 0.84rem; line-height: 1.6; overflow: hidden; }
-dialog.term[open] { display: flex; flex-direction: column; }
-dialog.term::backdrop { background: rgba(4, 7, 12, 0.8); }
-.term-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 8px 8px 14px; background: var(--term-bar); border-bottom: 1px solid var(--term-line); color: var(--term-muted); font-size: 0.78rem; }
-.term-bar .dots { display: flex; gap: 6px; }
-.term-bar .dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--term-line); }
-.term-x { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 4px; color: var(--term-fg); }
-.term-x:hover { background: var(--term-line); }
-.term-x:focus-visible, .term a:focus-visible { outline: 2px solid var(--term-accent); outline-offset: 2px; }
-.term-body { overflow-y: auto; padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 20px; }
-.term-body p { margin: 0; }
-.term .ps { color: var(--term-muted); }
-.term .ps b { color: var(--term-ok); font-weight: 500; }
-.term .who { font-size: 1.15rem; font-weight: 500; }
-.term .dim { color: var(--term-muted); }
-.term a { color: var(--term-accent); }
-.term-sec { display: flex; flex-direction: column; gap: 10px; }
-.term-sec h3 { font-family: var(--mono); font-size: inherit; font-weight: 500; line-height: 1.6; color: var(--term-accent); letter-spacing: 0.06em; }
-.term-sec h3::before { content: "# "; color: var(--term-muted); }
-.term-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 20px; }
-.term-row .t { font-weight: 500; }
-.term-row .d { color: var(--term-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.term-row ul, .term-row p { grid-column: 1 / -1; color: var(--term-muted); }
-.term ul { list-style: none; margin: 0; padding: 0; }
-.term ul li { display: grid; grid-template-columns: 1.6em minmax(0, 1fr); }
-.term ul li::before { content: "-"; color: var(--term-accent); }
-.term-kv { display: grid; grid-template-columns: 13em minmax(0, 1fr); gap: 4px 16px; margin: 0; }
-.term-kv dt { color: var(--term-muted); }
-.term-kv dd { margin: 0; }
-@media (max-width: 560px) { .term-row { grid-template-columns: minmax(0, 1fr); } .term-kv { grid-template-columns: minmax(0, 1fr); gap: 0; } .term-kv dd { margin-bottom: 8px; } }
-
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px 40px; }
-.skills h3 { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-
-.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid var(--line); border-radius: 8px; background: var(--surface); margin: 0; overflow: hidden; }
-.contact div { padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; min-width: 0; box-shadow: 1px 0 0 var(--line), 0 1px 0 var(--line); }
-.contact dt { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.contact dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; user-select: all; }
-.contact a { color: var(--fg); text-decoration-color: var(--accent); }
-footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--muted); font-family: var(--mono); font-size: 0.78rem; }
-
-@media (max-width: 720px) {
-  .hero { padding-block: 48px 40px; }
-  section { grid-template-columns: minmax(0, 1fr); padding-block: 40px; }
-  .row { grid-template-columns: minmax(0, 1fr); }
-}
-
-/* --- v2 additions --- */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 340px; align-items: center; gap: 40px; position: relative; isolation: isolate; }
-.net { position: absolute; inset: -60px -160px -20px; width: calc(100% + 320px); height: calc(100% + 80px); z-index: -1; pointer-events: none;
-  -webkit-mask-image: radial-gradient(ellipse 65% 75% at 72% 45%, #000 10%, transparent 78%);
-          mask-image: radial-gradient(ellipse 65% 75% at 72% 45%, #000 10%, transparent 78%); }
-main { overflow-x: clip; }
-.hero-main { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
-.typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 6ch; animation: type 0.7s steps(6) 0.4s backwards; }
-@keyframes type { from { width: 0; } }
-h1 { background: linear-gradient(100deg, var(--fg) 55%, var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.06em; }
-
-.fetch { border: 1px solid var(--line); border-radius: 10px; background: color-mix(in srgb, var(--surface) 92%, transparent); overflow: hidden; font-family: var(--mono); font-size: 0.8rem; box-shadow: 0 20px 50px -30px color-mix(in srgb, var(--accent) 40%, transparent); }
-.fetch-bar { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 0.74rem; }
-.fetch-bar .dots, .term-bar .dots { display: flex; gap: 6px; }
-.fetch-bar .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
-.fetch-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; }
-.fetch-host b { color: var(--accent); font-weight: 500; }
-.fetch-rule { color: var(--line); overflow: hidden; white-space: nowrap; }
-.fetch dl { margin: 0; display: flex; flex-direction: column; gap: 3px; }
-.fetch dl div { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); gap: 8px; }
-.fetch dt { color: var(--accent); }
-.fetch dd { margin: 0; color: var(--fg); }
-.fetch-theme { display: flex; align-items: center; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--muted); }
-.fetch-theme span { font-size: 0.74rem; }
-.sw { all: unset; cursor: pointer; width: 18px; height: 18px; border-radius: 4px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); transition: transform .15s; }
-.sw:hover { transform: translateY(-2px); }
-.sw[aria-pressed="true"] { outline: 2px solid var(--fg); outline-offset: 2px; }
-.sw:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
-
-.nav a { position: relative; transition: color 0.15s; }
-.nav a.active { color: var(--accent); }
-
-.feature, .project { transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
-.feature:hover, .project:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 18px 40px -28px color-mix(in srgb, var(--accent) 50%, transparent); }
-.chips li { transition: border-color 0.15s, color 0.15s; }
-.chips li:hover { border-color: var(--accent); color: var(--accent); }
-.btn { transition: border-color 0.15s, filter 0.15s, transform 0.15s; }
-.btn:hover { transform: translateY(-1px); }
-
-.row { border-top: 0; padding-block: 0 26px; }
-.row > div:last-child { position: relative; padding-left: 22px; border-left: 1px solid var(--line); padding-bottom: 4px; }
-.row > div:last-child::before { content: ""; position: absolute; left: -5px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--muted); }
-.row:first-child > div:last-child::before { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent); }
-
 .topo { margin: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); overflow: hidden; }
 .topo figcaption { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); padding: 8px 14px; border-bottom: 1px solid var(--line); }
 .topo figcaption span { color: var(--accent); margin-right: 6px; }
@@ -245,268 +144,237 @@ h1 { background: linear-gradient(100deg, var(--fg) 55%, var(--accent)); -webkit-
 .topo-svg .t-wire { stroke: var(--muted); stroke-width: 1.2; }
 .topo-svg .t-bus { stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; }
 .topo-svg .t-port { fill: var(--accent); }
-.topo-svg .t-node { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.topo-svg .t-node { fill: var(--surface); stroke: var(--line-2); stroke-width: 1.2; }
 .topo-svg .t-router { fill: var(--surface); stroke: var(--accent); stroke-width: 1.5; }
 
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
-.foot a { color: var(--muted); }
-.foot a:hover { color: var(--accent); }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.shot { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.shot button { all: unset; cursor: zoom-in; display: block; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: #05080f; aspect-ratio: 16 / 10; transition: border-color .15s; }
+.shot button:hover { border-color: var(--accent); }
+.shot button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.shot img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.shot figcaption { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
 
-@media (max-width: 860px) { .hero { grid-template-columns: minmax(0, 1fr); } .fetch { max-width: 420px; } }
-@media (prefers-reduced-motion: reduce) { .typed { animation: none; } .feature, .project, .btn, .chips li { transition: none; } .btn:hover { transform: none; } }
-
-/* --- v4 --- */
-.tmux { display: flex; flex-wrap: wrap; align-items: stretch; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font-family: var(--mono); font-size: 0.8rem; overflow: hidden; }
-.tmux-sess { background: var(--accent); color: var(--on-accent); font-weight: 500; padding: 10px 12px; display: flex; align-items: center; }
-.tmux-win { display: flex; flex-wrap: wrap; flex: 0 1 auto; margin: 0; min-width: 0; }
-.tmux-win div { display: flex; flex-wrap: wrap; gap: 0 8px; padding: 10px 12px; align-items: baseline; border-right: 1px solid var(--line); min-width: 0; }
-.tmux-win dt { color: var(--accent); }
-.tmux-win dd { margin: 0; color: var(--fg); }
-.tmux-clock { margin-left: auto; padding: 10px 14px; color: var(--muted); display: flex; align-items: center; font-variant-numeric: tabular-nums; }
-
-.expect { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-.exp { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 20px 22px; position: relative; overflow: hidden; }
-.exp::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: var(--c); opacity: .9; }
-.exp-yes { --c: var(--ok); }
-.exp-no { --c: var(--no); }
-.exp h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 14px; }
-.exp ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-.exp li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 12px; align-items: start; color: var(--fg); }
-.exp .ic { width: 22px; height: 22px; margin-top: 2px; }
-.exp .ic circle { fill: color-mix(in srgb, var(--c) 16%, transparent); stroke: color-mix(in srgb, var(--c) 55%, transparent); stroke-width: 1; }
-.exp .ic path { fill: none; stroke: var(--c); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-.skill-out { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); border: 1px dashed var(--line); border-radius: 8px; padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
-.skill-out .ps, .skill-out .q { color: var(--accent); }
-.skill-out .res { display: flex; flex-wrap: wrap; gap: 4px 14px; flex-basis: 100%; color: var(--muted); }
-.skill-out .res a { color: var(--fg); text-decoration-color: var(--accent); }
-.skill-out .res a::before { content: "→ "; color: var(--accent); }
-.chips .skill { all: unset; cursor: pointer; display: block; font-family: var(--mono); font-size: 0.75rem; padding: 4px 10px; margin: -5px -11px; border-radius: 4px; }
-.chips li:has(.skill) { border-style: solid; border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
-.chips li:has(.skill.on) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
-.chips .skill:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .flash { animation: flash 1.4s ease-out; }
-@keyframes flash { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 70%, transparent); border-color: var(--accent); } 100% { box-shadow: 0 0 0 14px transparent; } }
+@keyframes flash { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 70%, transparent); border-color: var(--accent); } 100% { box-shadow: 0 0 0 16px transparent; } }
 
-.contact div { position: relative; }
-.copy { all: unset; cursor: pointer; position: absolute; top: 12px; right: 12px; font-family: var(--mono); font-size: 0.7rem; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 2px 8px; }
+/* Troubleshooting */
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.case h3 { font-size: 1.15rem; font-weight: 500; font-family: var(--body); line-height: 1.35; }
+.case dl { margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.case dt { font: 500 0.7rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-bottom: 2px; }
+.case dd { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.case .fix dt { color: var(--ok); }
+.case .where { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* Skills */
+.skill-hint { color: var(--muted); font-size: 0.95rem; min-height: 1.6em; }
+.skill-hint a { color: var(--fg); text-decoration-color: var(--accent); margin-left: 4px; }
+.skill-hint a + a::before { content: "· "; color: var(--faint); }
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px 40px; }
+.skills h3 { font: 500 0.74rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
+.chips .skill { all: unset; cursor: pointer; display: block; padding: 4px 10px; margin: -5px -11px; border-radius: 5px; }
+.chips li:has(.skill) { border-color: color-mix(in srgb, var(--accent) 35%, var(--line-2)); transition: border-color .15s, background .15s; }
+.chips li:has(.skill.on), .chips li:has(.skill:hover) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
+
+/* Education */
+.edu { display: flex; flex-direction: column; }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid var(--line); border-radius: 12px; background: var(--surface); margin: 0; overflow: hidden; }
+.contact div { position: relative; padding: 18px 22px; display: flex; flex-direction: column; gap: 4px; min-width: 0; box-shadow: 1px 0 0 var(--line), 0 1px 0 var(--line); }
+.contact dt { font: 500 0.72rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+.contact dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+.contact a { color: var(--fg); text-decoration-color: var(--accent); }
+.copy { all: unset; cursor: pointer; position: absolute; top: 14px; right: 14px; font-family: var(--mono); font-size: 0.7rem; color: var(--muted); border: 1px solid var(--line-2); border-radius: 4px; padding: 2px 8px; }
 .copy:hover { color: var(--accent); border-color: var(--accent); }
-.copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); opacity: 0; pointer-events: none; background: var(--surface); color: var(--fg); border: 1px solid var(--accent); border-radius: 6px; padding: 8px 14px; font-family: var(--mono); font-size: 0.82rem; transition: opacity .2s, transform .2s; z-index: 20; }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); opacity: 0; pointer-events: none; background: var(--surface-2); color: var(--fg); border: 1px solid var(--accent); border-radius: 6px; padding: 8px 14px; font-size: 0.88rem; transition: opacity .2s, transform .2s; z-index: 30; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+footer { border-top: 1px solid var(--line); padding-block: 28px; color: var(--faint); font-size: 0.85rem; }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.foot a { color: var(--muted); }
+
+/* Dialogs */
+dialog { color: var(--fg); }
+dialog::backdrop { background: rgba(4, 7, 12, 0.82); }
+dialog.viewer { border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: var(--surface); max-width: min(96vw, 1040px); }
+dialog.viewer img { display: block; max-width: 100%; max-height: 76vh; margin-inline: auto; }
+dialog.viewer .cap { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 12px; font-size: 0.9rem; color: var(--muted); }
 dialog.viewer .nav-btns { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 dialog.viewer .count { font-family: var(--mono); font-size: 0.8rem; margin-right: 4px; }
 dialog.viewer .btn { padding: 7px 12px; }
-@media (max-width: 720px) { .tmux-win { flex-basis: 100%; } .tmux-win div { flex-basis: 100%; border-right: 0; border-bottom: 1px solid var(--line); } .tmux-clock { padding-top: 8px; padding-bottom: 8px; } }
-@media (max-width: 560px) { dialog.viewer .cap { flex-direction: column; align-items: stretch; } .tmux-clock { margin-left: 0; } }
-@media (prefers-reduced-motion: reduce) { .flash { animation: none; } .toast { transition: none; } }
 
-/* --- traceroute kerimisriba --- */
-.trace { position: fixed; left: 22px; top: 50%; transform: translateY(-50%); z-index: 4; font-family: var(--mono); font-size: 0.72rem; color: var(--muted); display: none; width: 140px; }
-.trace-head { margin-bottom: 14px; white-space: nowrap; }
-.trace-head span { color: var(--accent); }
-.trace-track { position: relative; height: min(56vh, 460px); margin-left: 6px; border-left: 2px dashed var(--line); }
-.trace-fill { position: absolute; left: -2px; top: 0; width: 2px; height: 0; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-.hop { position: absolute; left: -7px; top: var(--y, 0%); transform: translateY(-50%); display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--muted); }
-.hop i { width: 12px; height: 12px; border-radius: 3px; border: 2px solid var(--line); background: var(--bg); flex-shrink: 0; transition: border-color .2s, background .2s, box-shadow .2s; }
-.hop span { white-space: nowrap; transition: color .2s; }
-.hop b { font-weight: 500; color: var(--line); margin-right: 6px; transition: color .2s; }
-.hop:hover span, .hop:focus-visible span { color: var(--fg); }
-.hop:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-.hop.done i { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 35%, var(--bg)); }
-.hop.done b { color: var(--accent); }
-.hop.now i { background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent); }
-.hop.now span { color: var(--fg); }
-.trace-pkt { position: absolute; left: -5px; top: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--fg); box-shadow: 0 0 10px 2px var(--accent); transform: translateY(-50%); pointer-events: none; }
-.trace-pct { margin-top: 14px; margin-left: 0; color: var(--accent); font-variant-numeric: tabular-nums; }
-.edge { position: fixed; left: 0; top: 0; bottom: 0; width: 3px; z-index: 4; background: color-mix(in srgb, var(--line) 60%, transparent); }
-.edge span { display: block; width: 100%; height: 0; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-@media (min-width: 1380px) { .trace { display: block; } .edge { display: none; } }
-@media (prefers-reduced-motion: reduce) { .hop i, .hop span, .hop b { transition: none; } }
+dialog.cv { padding: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); width: min(94vw, 820px); max-height: 90vh; overflow: hidden; }
+dialog.cv[open] { display: flex; flex-direction: column; }
+.cv-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px 12px 24px; border-bottom: 1px solid var(--line); }
+.cv-bar .label { color: var(--muted); }
+.cv-bar .actions { gap: 8px; }
+.cv-bar .btn { padding: 7px 14px; font-size: 0.88rem; }
+.cv-body { overflow-y: auto; padding: 28px 32px 36px; display: flex; flex-direction: column; gap: 26px; font-size: 0.95rem; }
+.cv-body .who { font-family: var(--display); font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; }
+.cv-body .dim { color: var(--muted); }
+.cv-sec { display: flex; flex-direction: column; gap: 12px; }
+.cv-sec > h3 { font: 500 0.74rem/1.4 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.cv-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 20px; }
+.cv-row .t { font-weight: 600; }
+.cv-row .d { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+.cv-row ul, .cv-row p { grid-column: 1 / -1; color: var(--muted); }
+.cv-row ul { padding-left: 1.1em; display: flex; flex-direction: column; gap: 3px; margin-top: 4px; }
+.cv-kv { display: grid; grid-template-columns: 11em minmax(0, 1fr); gap: 6px 16px; margin: 0; }
+.cv-kv dt { color: var(--muted); }
+.cv-kv dd { margin: 0; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 56px 40px; }
+  .now { max-width: 520px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat { box-shadow: 1px 0 0 var(--line), 0 1px 0 var(--line); }
+}
+@media (max-width: 720px) {
+  .wrap { padding-inline: 16px; }
+  .nav { gap: 14px; }
+  .nav a:not(.nav-cv):not(.m-only) { display: none; }
+  .nav .m-only { display: inline; }
+  section { grid-template-columns: minmax(0, 1fr); padding-block: 52px; gap: 12px; }
+  .rail { padding-top: 0; }
+  .card { padding: 20px; }
+  .other-row { grid-template-columns: minmax(0, 1fr); }
+  .stat { padding: 18px; }
+  .stat b { font-size: 2rem; }
+  .cv-body { padding: 22px 20px 28px; }
+  .cv-row { grid-template-columns: minmax(0, 1fr); }
+  .cv-kv { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .cv-kv dd { margin-bottom: 8px; }
+  dialog.viewer .cap { flex-direction: column; align-items: stretch; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .flash { animation: none; }
+  .btn, .toast, .shot button { transition: none; }
+}
 </style>
 </head>
 <body>
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="#top">janre<span>@</span>puuorg</a>
+    <a class="brand" href="#top"><img src="favicon.svg" alt="" width="26" height="26">Janre Puuorg</a>
     <nav class="nav" aria-label="Peamenüü">
-      <a href="#minust">Minust</a>
-      <a href="#haridus">Haridus</a>
-      <a href="#kogemus">Töökogemus</a>
+      <a href="#kogemus">Kogemus</a>
       <a href="#projektid">Projektid</a>
+      <a href="#veaotsing">Veaotsing</a>
       <a href="#oskused">Oskused</a>
+      <a href="#minust">Minust</a>
       <a href="#kontakt">Kontakt</a>
+      <a class="m-only" href="#kontakt">Kontakt</a>
+      <a class="nav-cv" href="Janre_Puuorg_CV.pdf" data-cv>CV</a>
     </nav>
   </div>
 </header>
 
-<nav class="trace" aria-label="Lehe kerimise edenemine">
-  <p class="trace-head"><span>$</span> traceroute janre.ee</p>
-  <div class="trace-track" id="trace">
-    <span class="trace-fill" id="trace-fill"></span>
-    <a class="hop hop-0" href="#top" data-t="top"><i></i><span><b>0</b>janre.ee</span></a>
-    <a class="hop" href="#minust" data-t="minust"><i></i><span><b>1</b>minust</span></a>
-    <a class="hop" href="#haridus" data-t="haridus"><i></i><span><b>2</b>haridus</span></a>
-    <a class="hop" href="#kogemus" data-t="kogemus"><i></i><span><b>3</b>töökogemus</span></a>
-    <a class="hop" href="#projektid" data-t="projektid"><i></i><span><b>4</b>projektid</span></a>
-    <a class="hop" href="#oskused" data-t="oskused"><i></i><span><b>5</b>oskused</span></a>
-    <a class="hop" href="#kontakt" data-t="kontakt"><i></i><span><b>6</b>kontakt</span></a>
-    <span class="trace-pkt" id="trace-pkt" aria-hidden="true"></span>
-  </div>
-  <p class="trace-pct" id="trace-pct" aria-hidden="true">0%</p>
-</nav>
-<div class="edge" aria-hidden="true"><span id="edge"></span></div>
-
 <main class="wrap" id="top">
   <div class="hero">
-   <canvas class="net" id="net" aria-hidden="true"></canvas>
-   <div class="hero-main">
-    <p class="prompt"><b>janre@portfolio</b>:~$ <span class="typed">whoami</span> <span class="cursor" aria-hidden="true"></span></p>
-    <h1>Janre Puuorg</h1>
-    <p class="role">IT-süsteemide spetsialisti eriala õpilane</p>
-    <p class="motto">„Hakkama saab see, kes seda piisavalt tahab.“</p>
-    <p class="lead">Olen 19-aastane ja õpin Tartu Rakenduslikus Kolledžis. Kõige rohkem huvitavad mind arvutivõrgud, lisaks operatsioonisüsteemid ja riistvara, ning tahan selles valdkonnas iga päevaga paremaks saada.</p>
-    <div class="actions">
-      <a class="btn" href="#projektid">Vaata projekte</a>
-      <a class="btn" href="#kontakt">Võta ühendust</a>
-      <a class="btn" href="Janre_Puuorg_CV.pdf" data-cv>Ava CV</a>
-      <a class="btn primary" href="Janre_Puuorg_CV.pdf" download>Lae alla CV</a>
-    </div>
-   </div>
-    <aside class="fetch" aria-label="Kiirülevaade">
-      <div class="fetch-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>neofetch</span></div>
-      <div class="fetch-body">
-        <p class="fetch-host"><b>janre</b>@<b>janre.ee</b></p>
-        <p class="fetch-rule" aria-hidden="true">────────────────</p>
-        <dl>
-          <div><dt>OS</dt><dd>Windows Server · Linux · BSD</dd></div>
-          <div><dt>Eriala</dt><dd>IT-süsteemide spetsialist</dd></div>
-          <div><dt>Uptime</dt><dd>19 aastat</dd></div>
-          <div><dt>Shell</dt><dd>bash, PowerShell</dd></div>
-          <div><dt>Fookus</dt><dd>arvutivõrgud</dd></div>
-          <div><dt>Projektid</dt><dd>2 valmis, 1 töös</dd></div>
-          <div><dt>Juhiluba</dt><dd>B-kategooria</dd></div>
-        </dl>
-        <div class="fetch-theme" role="group" aria-label="Vali teema värv"><span>teema</span>
-          <button class="sw" type="button" data-a="cyan" style="--c:#4fd6e8" aria-label="Tsüaan" aria-pressed="true"></button>
-          <button class="sw" type="button" data-a="amber" style="--c:#f0b04c" aria-label="Merevaik" aria-pressed="false"></button>
-          <button class="sw" type="button" data-a="violet" style="--c:#a99bff" aria-label="Lilla" aria-pressed="false"></button>
-          <button class="sw" type="button" data-a="rose" style="--c:#ff8fb8" aria-label="Roosa" aria-pressed="false"></button>
-        </div>
+    <div class="hero-main">
+      <p class="avail"><i aria-hidden="true"></i>Avatud tööpakkumistele</p>
+      <h1>Janre Puuorg</h1>
+      <p class="role">IT-süsteemide spetsialist · arvutivõrgud ja taristu</p>
+      <p class="lead">Seadistan ja hooldan arvutivõrke ning Windowsi ja Linuxi taristut. Praegu olen <strong>IT-praktikal Kohila Vallavalitsuses</strong>, kus paigaldan WiFi-pääsupunkte, kaardistan asutuste võrke ja korrastan serveriruumi.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projektid">Vaata projekte</a>
+        <a class="btn" href="Janre_Puuorg_CV.pdf" data-cv>Ava CV</a>
+        <a class="link" href="#kontakt">Võta ühendust →</a>
       </div>
+    </div>
+    <aside class="now" aria-labelledby="now-h">
+      <h2 id="now-h">Hetkel</h2>
+      <dl>
+        <div><dt>Praktika</dt><dd>Kohila Vallavalitsus<span>IT-praktikant, alates 11.2026</span></dd></div>
+        <div><dt>Õpingud</dt><dd>Tartu Rakenduslik Kolledž<span>IT-süsteemide spetsialist, 2024 –</span></dd></div>
+        <div><dt>Fookus</dt><dd>Arvutivõrgud, WiFi, Windows Server, Linux</dd></div>
+        <div><dt>Otsin</dt><dd>Tööd IT-toes, süsteemi- või võrguhalduses</dd></div>
+      </dl>
     </aside>
   </div>
 
-  <div class="tmux" role="group" aria-label="Kiirfaktid">
-    <span class="tmux-sess">[janre]</span>
-    <dl class="tmux-win">
-      <div><dt>0:kool</dt><dd>Tartu Rakenduslik Kolledž</dd></div>
-      <div><dt>1:huvid</dt><dd>võrgud, OS-id, riistvara</dd></div>
-      <div><dt>2:matk</dt><dd>42 km ühe päevaga</dd></div>
-    </dl>
-    <span class="tmux-clock" id="clock" aria-label="Kellaaeg Eestis">Tartu</span>
+  <div class="stats" role="list" aria-label="Lühidalt numbrites">
+    <div class="stat" role="listitem"><b>5</b><span>WiFi-pääsupunkti paigaldatud ja seadistatud</span></div>
+    <div class="stat" role="listitem"><b>50</b><span>võrgupesa märgistatud ja kaardistatud</span></div>
+    <div class="stat" role="listitem"><b>4</b><span>asutuse võrguseadmed kaardistatud</span></div>
+    <div class="stat" role="listitem"><b>2</b><span>valminud taristuprojekti, Windows ja Linux</span></div>
   </div>
 
-  <div style="height:56px" aria-hidden="true"></div>
-
-  <section id="minust">
-    <div class="rail">cat minust.txt</div>
-    <div class="body">
-      <h2>Kes ma olen?</h2>
-      <div class="prose">
-        <p>Olen IT-süsteemide spetsialisti eriala õpilane, kellel on suur huvi infotehnoloogia vastu. Enamiku oma erialastest teadmistest olen saanud Tartu Rakenduslikust Kolledžist ja need kasvavad iga päevaga.</p>
-        <p>Vabal ajal tegelen spordi ja kehalise vormi arendamisega, eelkõige ronimisega. Mais 2026 läbisin kooli esindades ühe päevaga 42 km jalgsimatka Tartust Luuani, mis näitab minu sihikindlust ja head füüsilist vastupidavust.</p>
-      </div>
-      <div class="expect">
-        <div class="exp exp-yes">
-          <h3>Mida minult oodata võib</h3>
-          <ul><li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9"/><path d="M6 10.4l2.6 2.6L14 7.6"/></svg><span>Valmidust areneda, õppida ja anda endast parim</span></li><li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9"/><path d="M6 10.4l2.6 2.6L14 7.6"/></svg><span>Head eesti ja inglise keele oskust</span></li><li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9"/><path d="M6 10.4l2.6 2.6L14 7.6"/></svg><span>Huvi oma eriala uute teadmiste vastu: arvutivõrgud, operatsioonisüsteemid, riistvara</span></li></ul>
-        </div>
-        <div class="exp exp-no">
-          <h3>Mida minult oodata ei või</h3>
-          <ul><li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9"/><path d="M7 7l6 6M13 7l-6 6"/></svg><span>Alla andmist raskuste ees</span></li><li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9"/><path d="M7 7l6 6M13 7l-6 6"/></svg><span>Negatiivset suhtumist</span></li><li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9"/><path d="M7 7l6 6M13 7l-6 6"/></svg><span>Ebakindlust</span></li></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="haridus">
-    <div class="rail">ls haridus/</div>
-    <div class="body">
-      <h2>Haridus</h2>
-      <div class="rows">
-        <div class="row">
-          <div class="when">2024 – praegu</div>
-          <div>
-            <h3>Tartu Rakenduslik Kolledž <span class="tag">õpin</span></h3>
-            <div class="sub">IT-süsteemide spetsialist</div>
-            <p>Kool, kus olen omandanud enamiku oma erialastest teadmistest.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="when">2015 – 2024</div>
-          <div>
-            <h3>Kohila Gümnaasium</h3>
-            <p>Kaitsesin kogu kooli ees uurimistöö õpilaste vaba aja veetmise ja meelelahutuseelistuste kohta.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="when">2015</div>
-          <div>
-            <h3>Tallinna Merekalda Kool</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="kogemus">
-    <div class="rail">ls kogemus/</div>
+    <div class="rail"><b>01</b>kogemus</div>
     <div class="body">
       <h2>Töökogemus</h2>
-      <div class="rows">
-        <div class="row">
-          <div class="when">11.2026 – praegu</div>
+      <article class="card" id="t-kohila" data-name="IT-praktika Kohila Vallavalitsuses">
+        <div class="card-head">
           <div>
-            <h3>Kohila Vallavalitsus <span class="tag">praktika</span></h3>
+            <h3>Kohila Vallavalitsus <span class="tag">käimas</span></h3>
             <div class="sub">IT-praktikant</div>
-            <p>Tegelen valla IT- ja võrguülesannetega ning paigaldan ja seadistan Ubiquiti WiFi pääsupunkte.</p>
+          </div>
+          <span class="when">11.2026 – praegu</span>
+        </div>
+        <p>Valla IT- ja võrgutöö: WiFi-võrkude laiendamine, võrgutaristu kaardistamine ja dokumenteerimine, seadmete inventuur ning kasutajatugi vallamajas ja valla asutustes.</p>
+        <div class="cols">
+          <div>
+            <h4>Võrk ja WiFi</h4>
+            <ul class="did">
+              <li>Paigaldasin ja seadistasin <strong>5 Ubiquiti WiFi-pääsupunkti</strong>. Kogukonnakeskuses lisasin uue pääsupunkti olemasoleva võrgu kõrvale, et levi kataks mõlemad korrused.</li>
+              <li>Uurisin UniFi OS Serveri logisid ja võrgu topoloogiat.</li>
+              <li>Kaardistasime ja testisime võrguseadmed <strong>neljas asutuses</strong> (kaks lasteaeda, noortekeskus, raamatukogu) ning hindasime võrgukappide seisukorda.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Kaabeldus ja dokumentatsioon</h4>
+            <ul class="did">
+              <li>Mõõtsin, testisin, märgistasin ja sorteerisin võrgukaablid.</li>
+              <li>Märgistasin <strong>50 võrgupesa</strong> kasutaja ja ühendatud seadmega ning kaardistasin WiFi- ja LAN-seadmete pordid.</li>
+              <li>Kaardistasin vallamaja tööjaamad: iga töötaja kuvarid, lisaseadmed, ruum ja vajadused.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Riistvara ja kasutajatugi</h4>
+            <ul class="did">
+              <li>Tegin serveriruumi inventuuri ja korrastasin selle; testisin kasutusest väljas olevaid pääsupunkte, printereid ja kommutaatoreid.</li>
+              <li>Hindasin sülearvutite ja mobiiltelefonide seisukorda, tegin jõudlusteste ja vahetasin kolmel sülearvutil aku.</li>
+              <li>Taastasin kogukonnakeskuse printeri ühenduse ja nõustasin Kohila Gümnaasiumi spordikeskust kaabliühenduse osas.</li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="when">06.2026 – 08.2026</div>
-          <div>
-            <h3>Circle K</h3>
-            <div class="sub">Klienditeenindaja</div>
-            <p>Klientide teenindamine, kassatöö, kauba väljapanek ja poe korrashoid.</p>
-          </div>
+        <ul class="chips" aria-label="Kasutatud tehnoloogiad">
+          <li>Ubiquiti UniFi</li><li>UniFi OS Server</li><li>WiFi</li><li>Kaablitestimine</li><li>Inventuur</li><li>Kasutajatugi</li>
+        </ul>
+      </article>
+      <div class="other">
+        <p class="label" style="margin-bottom:6px">Varasem töökogemus</p>
+        <div class="other-row">
+          <span class="when">06.2026 – 08.2026</span>
+          <div><h3>Circle K <span>· klienditeenindaja</span></h3><p>Klienditeenindus ja kassatöö kiires keskkonnas, kauba väljapanek ja poe korrashoid.</p></div>
         </div>
-        <div class="row">
-          <div class="when">07.2025 – 08.2025</div>
-          <div>
-            <h3>Vembu-Tembumaa</h3>
-            <div class="sub">Atraktsioonide operaator</div>
-            <p>Laste atraktsioonide ettevalmistamine ja käitamine ning külastajate ohutuse tagamine.</p>
-          </div>
+        <div class="other-row">
+          <span class="when">07.2025 – 08.2025</span>
+          <div><h3>Vembu-Tembumaa <span>· atraktsioonide operaator</span></h3><p>Atraktsioonide ettevalmistamine ja käitamine ning külastajate ohutuse tagamine.</p></div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="projektid">
-    <div class="rail">ls projektid/</div>
+    <div class="rail"><b>02</b>projektid</div>
     <div class="body">
-      <h2>Olulised tööd</h2>
-      <article class="feature" id="p-win" data-name="Ettevõtte kasutajate ja ligipääsude haldus">
-        <div class="os">Windows Server · Active Directory</div>
-        <h3>Ettevõtte kasutajate ja ligipääsude haldus</h3>
-        <p>Ehitasin virtuaalkeskkonda väikese ettevõtte Windowsi taristu, kus töötajate kontosid ja ligipääse hallatakse ühest kohast. Iga osakond näeb failiserveris ainult oma kaustu.</p>
+      <h2>Projektid</h2>
+      <p class="intro">Koolis virtuaalkeskkonnas ehitatud ettevõtte taristud, algusest lõpuni ise seadistatud ja testitud.</p>
+      <article class="card" id="p-win" data-name="Windowsi domeen ja failiserver">
+        <div class="eyebrow">Windows Server · Active Directory</div>
+        <h3 style="font-size:1.5rem">Ettevõtte kasutajate ja ligipääsude haldus</h3>
+        <p>Väikese ettevõtte Windowsi taristu, kus töötajate kontosid ja ligipääse hallatakse ühest kohast. Iga osakond näeb failiserveris ainult oma kaustu ning võrgukettad ilmuvad kasutajale sisselogimisel automaatselt.</p>
         <ul class="did">
-          <li>Domeen Puuorg.infra koos domeenikontrolleri, failiserveri, ruuteri, veebiserveri ja haldusarvutiga</li>
+          <li>Domeen <strong>Puuorg.infra</strong>: domeenikontroller, failiserver, ruuter, veebiserver ja haldusarvuti</li>
           <li>OU-struktuur, kasutajad ja grupid osakondade kaupa: juhatus, personaliosakond, töötajad</li>
           <li>Jagatud kaustad osakonnapõhiste õigustega, kontrollitud eri kasutajatega sisse logides</li>
-          <li>Võrgukettad ühenduvad automaatselt rühmapoliitika kaudu</li>
+          <li>Võrgukettad ühenduvad automaatselt rühmapoliitika (GPO) kaudu</li>
           <li>DHCP, NAT ja oma sertifitseerimiskeskus (AD CS)</li>
         </ul>
         <ul class="chips" aria-label="Kasutatud tehnoloogiad">
@@ -535,17 +403,16 @@ dialog.viewer .btn { padding: 7px 12px; }
           </figure>
         </div>
       </article>
-      <article class="feature" id="p-linux" data-name="Infosüsteem ettevõttele Eesti AS">
-        <div class="os">Linux / BSD · Samba AD</div>
-        <h3>Infosüsteem ettevõttele Eesti AS</h3>
-        <p>Ehitasin kooli Proxmoxi keskkonda väikese ettevõtte infosüsteemi avatud lähtekoodiga tarkvaraga. Töötajad kasutavad ühte domeenikontot nii Windowsi arvutis kui ka ettevõtte veebiteenustes.</p>
+      <article class="card" id="p-linux" data-name="Linuxi infosüsteem ettevõttele">
+        <div class="eyebrow">Linux / BSD · Samba AD · avatud lähtekood</div>
+        <h3 style="font-size:1.5rem">Infosüsteem ettevõttele Eesti AS</h3>
+        <p>Väikese ettevõtte infosüsteem avatud lähtekoodiga tarkvaraga kooli Proxmoxi keskkonnas. Töötajad kasutavad ühte domeenikontot nii Windowsi arvutis kui ka ettevõtte veebiteenustes.</p>
         <ul class="did">
           <li>OPNsense ruuter ja tulemüür, sisevõrk 10.11.12.0/24</li>
           <li>Samba AD domeenikontroller (puuorg.local) koos DNS-iga kõigile serveritele</li>
           <li>Samba failiserver kolme jagatud kaustaga (Juhatus, Eesti, Avalik) grupipõhiste õigustega</li>
           <li>Windows 11 tööjaam domeenis: võrgukettad ja taustapilt rühmapoliitikaga, haldus RSAT-iga</li>
           <li>Wiki.js, Nextcloud ja Rocket.Chat ühendatud AD-ga üle LDAP-i; wikis kasutusjuhendid kõigi teenuste kohta</li>
-          <li>Veaotsing: Rocket.Chat ei lasknud AD kasutajat sisse, sest kontol puudus e-posti väli. Leidsin põhjuse serveri logist ja lahendasin selle LDAP-i vaikedomeeni seadistusega.</li>
         </ul>
         <ul class="chips" aria-label="Kasutatud tehnoloogiad">
           <li>OPNsense</li><li>Samba AD</li><li>DNS</li><li>Samba failiserver</li><li>GPO / RSAT</li><li>LDAP</li><li>Wiki.js</li><li>Nextcloud</li><li>Rocket.Chat</li><li>Proxmox</li>
@@ -581,122 +448,175 @@ dialog.viewer .btn { padding: 7px 12px; }
           </figure>
         </div>
       </article>
-      <div class="projects">
-        <article class="project" id="p-net" data-name="Kolme asukohaga ettevõtte arvutivõrk">
-          <div class="os">Võrguprojekt <span class="tag">töös</span></div>
-          <h3>Kolme asukohaga ettevõtte arvutivõrk</h3>
-          <p>Kavandan 150 töötajaga ettevõttele turvalise ja töökindla võrgu: loogiline topoloogia, IP-aadresside plaan, seadmete valik, kaabeldus, eelarve ja riskianalüüs. Näidislahenduses seadistan OPNsense'i ruuterid, VLAN-id (haldus, tööjaamad, külalised, DMZ), tulemüürireeglid, OpenVPN-i kaugtööks, kontoritevahelise IPsec-tunneli ning sissetungituvastuse ja seire.</p>
+      <article class="card" id="p-net" data-name="Kolme asukohaga ettevõtte võrk">
+        <div class="eyebrow">Võrguprojekt · OPNsense <span class="tag">töös</span></div>
+        <h3 style="font-size:1.5rem">Kolme asukohaga ettevõtte arvutivõrk</h3>
+        <p>Turvaline ja töökindel võrk 150 töötajaga ettevõttele: loogiline topoloogia, IP-aadresside plaan, seadmete valik, kaabeldus, eelarve ja riskianalüüs.</p>
+        <ul class="did">
+          <li>OPNsense ruuterid ja tulemüürireeglid igas asukohas</li>
+          <li>VLAN-id: haldus, tööjaamad, külalised, DMZ</li>
+          <li>OpenVPN kaugtööks ja kontoritevaheline IPsec-tunnel</li>
+          <li>Sissetungituvastus ja seire</li>
+        </ul>
+        <ul class="chips" aria-label="Kasutatud tehnoloogiad">
+          <li>OPNsense</li><li>VLAN</li><li>OpenVPN</li><li>IPsec</li><li>IDS</li><li>IP-plaan</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="veaotsing">
+    <div class="rail"><b>03</b>veaotsing</div>
+    <div class="body">
+      <h2>Veaotsing</h2>
+      <p class="intro">Mõned juhtumid, kus asi ei töötanud nii nagu pidi, ja kuidas ma põhjuse üles leidsin.</p>
+      <div class="cases">
+        <article class="case">
+          <span class="where">Projekt · Rocket.Chat + Samba AD</span>
+          <h3>AD kasutaja ei saanud Rocket.Chati sisse logida</h3>
+          <dl>
+            <div><dt>Uurimine</dt><dd>LDAP-ühenduse test õnnestus, aga sisselogimine mitte. Serveri logist selgus, et kasutaja kontol puudus e-posti väli, mida Rocket.Chat nõuab.</dd></div>
+            <div class="fix"><dt>Lahendus</dt><dd>Seadistasin Rocket.Chatis LDAP-i vaikedomeeni. AD kasutajad saavad nüüd sisse logida.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="where">Praktika · tööjaam</span>
+          <h3>ChromeOS ja Windows 10 dual-boot ei läinud tööle</h3>
+          <dl>
+            <div><dt>Uurimine</dt><dd>Katsetasin paigaldust mitmel moel. Lõpuks selgus, et viga polnud seadistuses, vaid paigaldusmeediumis: mälupulk oli vigane.</dd></div>
+            <div class="fix"><dt>Tulemus</dt><dd>Põhjus leitud. Paigalduse lõpetamiseks on vaja uut mälupulka.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <span class="where">Praktika · kasutajatugi</span>
+          <h3>Kogukonnakeskuse printer ei saanud arvutiga ühendust</h3>
+          <dl>
+            <div><dt>Uurimine</dt><dd>Läksin kohale ja kontrollisin printeri võrguühendust.</dd></div>
+            <div class="fix"><dt>Lahendus</dt><dd>Taaskäivitasin printeri ja ühendasin selle uuesti võrku. Printer töötab taas.</dd></div>
+          </dl>
         </article>
       </div>
     </div>
   </section>
 
   <section id="oskused">
-    <div class="rail">cat oskused.txt</div>
+    <div class="rail"><b>04</b>oskused</div>
     <div class="body">
       <h2>Oskused</h2>
-      <p class="skill-out" id="skill-out" aria-live="polite"><span class="ps">$</span> grep -l <span class="q">"…"</span> projektid/ <span class="res">vali allpool oskus, et näha, millises projektis seda kasutasin</span></p>
+      <p class="skill-hint" id="skill-hint" aria-live="polite">Vali oskus, et näha, kus ma seda kasutanud olen.</p>
       <div class="skills">
-        <div><h3>Võrgud</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-linux p-net">OPNsense</button></li><li><button type="button" class="skill" data-p="p-win">DHCP</button></li><li><button type="button" class="skill" data-p="p-win p-linux">DNS</button></li><li><button type="button" class="skill" data-p="p-win">NAT</button></li><li><button type="button" class="skill" data-p="p-net">VLAN</button></li><li><button type="button" class="skill" data-p="p-net">VPN</button></li><li>Ubiquiti WiFi</li></ul></div>
-        <div><h3>Operatsioonisüsteemid</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-win p-linux">Windows</button></li><li><button type="button" class="skill" data-p="p-win">Windows Server</button></li><li>Ubuntu</li><li>Debian</li><li>CentOS</li></ul></div>
-        <div><h3>Haldus</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-win p-linux">Active Directory</button></li><li><button type="button" class="skill" data-p="p-win p-linux">Rühmapoliitikad</button></li><li><button type="button" class="skill" data-p="p-win p-linux">Kasutajahaldus</button></li><li><button type="button" class="skill" data-p="p-win p-linux">Failiserver</button></li><li><button type="button" class="skill" data-p="p-linux">Samba AD</button></li><li><button type="button" class="skill" data-p="p-linux">LDAP</button></li></ul></div>
-        <div><h3>Virtualiseerimine ja tööriistad</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-linux p-net">Proxmox</button></li><li><button type="button" class="skill" data-p="p-win">Xen Orchestra</button></li><li>VMware</li><li>PuTTY</li></ul></div>
-        <div><h3>Keeled</h3><ul class="chips"><li>eesti keel, emakeel</li><li>inglise keel, B2</li></ul></div>
-        <div><h3>Muu</h3><ul class="chips"><li>B-kategooria juhiluba</li></ul></div>
+        <div><h3>Võrgud</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-linux p-net">OPNsense</button></li><li><button type="button" class="skill" data-p="t-kohila">Ubiquiti UniFi</button></li><li><button type="button" class="skill" data-p="p-win">DHCP</button></li><li><button type="button" class="skill" data-p="p-win p-linux">DNS</button></li><li><button type="button" class="skill" data-p="p-win">NAT</button></li><li><button type="button" class="skill" data-p="p-net">VLAN</button></li><li><button type="button" class="skill" data-p="p-net">VPN</button></li><li><button type="button" class="skill" data-p="t-kohila">Kaabeldus</button></li></ul></div>
+        <div><h3>Süsteemid</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-win">Windows Server</button></li><li><button type="button" class="skill" data-p="p-win p-linux">Windows 11</button></li><li><button type="button" class="skill" data-p="p-linux">Linux</button></li></ul></div>
+        <div><h3>Haldus</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-win p-linux">Active Directory</button></li><li><button type="button" class="skill" data-p="p-win p-linux">Rühmapoliitikad</button></li><li><button type="button" class="skill" data-p="p-win p-linux">Failiserver</button></li><li><button type="button" class="skill" data-p="p-linux">Samba AD</button></li><li><button type="button" class="skill" data-p="p-linux">LDAP</button></li></ul></div>
+        <div><h3>Virtualiseerimine</h3><ul class="chips"><li><button type="button" class="skill" data-p="p-linux">Proxmox</button></li><li><button type="button" class="skill" data-p="p-win">Xen Orchestra</button></li><li>VMware</li></ul></div>
+        <div><h3>Riistvara ja tugi</h3><ul class="chips"><li><button type="button" class="skill" data-p="t-kohila">Inventuur</button></li><li><button type="button" class="skill" data-p="t-kohila">Seadmete diagnostika</button></li><li><button type="button" class="skill" data-p="t-kohila">Kasutajatugi</button></li></ul></div>
+        <div><h3>Keeled ja muu</h3><ul class="chips"><li>eesti keel, emakeel</li><li>inglise keel, B2</li><li>B-kategooria juhiluba</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="minust">
+    <div class="rail"><b>05</b>minust</div>
+    <div class="body">
+      <h2>Minust</h2>
+      <div class="prose">
+        <p>Olen 19-aastane ja õpin Tartu Rakenduslikus Kolledžis IT-süsteemide spetsialistiks. Kõige rohkem huvitavad mind <strong>arvutivõrgud</strong>, lisaks operatsioonisüsteemid ja riistvara. Mulle meeldib, kui asja saab ise läbi proovida ja lõpuks töökorda panna.</p>
+        <p>Vabal ajal ronin ja hoian end vormis. Mais 2026 läbisin kooli esindades <strong>ühe päevaga 42 km jalgsimatka</strong> Tartust Luuani. Sama järjekindlusega võtan ette ka tööülesanded.</p>
+      </div>
+      <div class="edu">
+        <p class="label" style="margin-bottom:6px">Haridus</p>
+        <div class="other-row">
+          <span class="when">2024 – praegu</span>
+          <div><h3>Tartu Rakenduslik Kolledž <span>· IT-süsteemide spetsialist</span></h3></div>
+        </div>
+        <div class="other-row">
+          <span class="when">2015 – 2024</span>
+          <div><h3>Kohila Gümnaasium</h3></div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="kontakt">
-    <div class="rail">ping janre</div>
+    <div class="rail"><b>06</b>kontakt</div>
     <div class="body">
-      <h2>Kontakt</h2>
-      <p class="prose">Otsin võimalusi oma erialal areneda. Kirjuta julgelt, kui sul on praktikakoht, tööpakkumine või lihtsalt küsimus.</p>
+      <h2>Võtame ühendust</h2>
+      <p class="intro" style="margin-top:-8px">Otsin tööd IT-toes, süsteemi- või võrguhalduses. Kirjuta või helista, vastan kiiresti.</p>
       <dl class="contact">
         <div><dt>E-post</dt><dd><a href="mailto:janre.puuorg@gmail.com">janre.puuorg@gmail.com</a></dd><button type="button" class="copy" data-copy="janre.puuorg@gmail.com">kopeeri</button></div>
         <div><dt>Telefon</dt><dd><a href="tel:+37256837376">+372 5683 7376</a></dd><button type="button" class="copy" data-copy="+372 5683 7376">kopeeri</button></div>
         <div><dt>GitHub</dt><dd><a href="https://github.com/janrepu" target="_blank" rel="noopener">github.com/janrepu</a></dd></div>
       </dl>
       <div class="actions">
+        <a class="btn primary" href="mailto:janre.puuorg@gmail.com">Kirjuta e-kiri</a>
         <a class="btn" href="Janre_Puuorg_CV.pdf" data-cv>Ava CV</a>
-        <a class="btn primary" href="Janre_Puuorg_CV.pdf" download>Lae alla CV</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot"><span>© 2026 Janre Puuorg · janre.ee</span><span>käsitsi ehitatud, hostitud GitHub Pagesis · <a href="#top">tagasi üles ↑</a></span></div>
+  <div class="wrap foot"><span>© 2026 Janre Puuorg · janre.ee</span><a href="#top">Tagasi üles ↑</a></div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<dialog class="term" id="cv" aria-label="CV">
-  <div class="term-bar">
-    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span>janre@portfolio: ~</span>
-    <button class="term-x" type="button" id="cv-close" aria-label="Sulge CV">✕</button>
+<dialog class="cv" id="cv" aria-label="CV">
+  <div class="cv-bar">
+    <span class="label">CV · Janre Puuorg</span>
+    <span class="actions"><a class="btn primary" href="Janre_Puuorg_CV.pdf" download>Lae alla PDF</a><button class="btn" type="button" id="cv-close" aria-label="Sulge CV">Sulge</button></span>
   </div>
-  <div class="term-body">
-    <p class="ps"><b>janre@portfolio</b>:~$ cat cv.txt</p>
+  <div class="cv-body">
     <div>
       <p class="who">Janre Puuorg</p>
-      <p>IT-süsteemide spetsialisti eriala õpilane</p>
+      <p>IT-süsteemide spetsialist · arvutivõrgud ja taristu</p>
       <p class="dim">+372 5683 7376 · janre.puuorg@gmail.com · github.com/janrepu · Kohila</p>
-      <p><a href="Janre_Puuorg_CV.pdf" download>[ lae alla PDF ]</a></p>
     </div>
-    <div class="term-sec">
-      <h3>PROFIIL</h3>
-      <p>IT-süsteemide spetsialisti eriala õpilane, keda huvitavad eelkõige arvutivõrgud ning Windowsi ja Linuxi süsteemide haldamine. Kiire õppimisvõimega, usaldusväärne ja kohanemisvõimeline, kogemusega klienditeeninduses ja meeskonnatöös.</p>
+    <div class="cv-sec">
+      <h3>Profiil</h3>
+      <p>IT-süsteemide spetsialisti eriala õpilane, keda huvitavad eelkõige arvutivõrgud ning Windowsi ja Linuxi süsteemide haldamine. Praegu IT-praktikal Kohila Vallavalitsuses. Kiire õppimisvõimega, usaldusväärne ja kohanemisvõimeline, kogemusega klienditeeninduses ja meeskonnatöös.</p>
     </div>
-    <div class="term-sec">
-      <h3>HARIDUS</h3>
-      <div class="term-row"><span class="t">Tartu Rakenduslik Kolledž · IT-süsteemide spetsialist</span><span class="d">2024 – praegu</span></div>
-      <div class="term-row"><span class="t">Kohila Gümnaasium</span><span class="d">2015 – 2024</span>
-        <p>Kaitsesin kogu kooli ees uurimistöö õpilaste vaba aja veetmise ja meelelahutuseelistuste kohta.</p></div>
-    </div>
-    <div class="term-sec">
-      <h3>PROJEKTID</h3>
-      <div class="term-row"><span class="t">Windowsi domeen ja failiserver · Windows Server</span><span class="d">2026</span>
+    <div class="cv-sec">
+      <h3>Töökogemus</h3>
+      <div class="cv-row"><span class="t">Kohila Vallavalitsus · IT-praktikant</span><span class="d">11.2026 – praegu</span>
         <ul>
-          <li>Seadistasin Active Directory domeeni koos domeenikontrolleri, failiserveri, ruuteri ja haldusarvutiga.</li>
-          <li>Lõin osakondade kaupa OU-struktuuri, kasutajad ja grupid ning jagasin kaustaõigused osakonniti.</li>
-          <li>Võrgukettad ühenduvad kasutajatele automaatselt rühmapoliitika (GPO) kaudu.</li>
-          <li>Seadistasin DHCP, NAT-i ja sertifitseerimiskeskuse (AD CS).</li>
+          <li>Paigaldasin ja seadistasin 5 Ubiquiti WiFi-pääsupunkti; uurisin UniFi OS Serveri logisid ja topoloogiat.</li>
+          <li>Kaardistasin ja testisin võrguseadmed neljas valla asutuses; märgistasin 50 võrgupesa ja kaardistasin pordid.</li>
+          <li>Serveriruumi ja tööjaamade inventuur, seadmete diagnostika, akuvahetused ja kasutajatugi.</li>
         </ul></div>
-      <div class="term-row"><span class="t">Infosüsteem ettevõttele Eesti AS · Linux/BSD</span><span class="d">2026</span>
-        <ul><li>Ehitasin OPNsense tulemüüri, Samba AD domeenikontrolleri ja failiserveriga infosüsteemi, kus Windows 11 tööjaam ja veebiteenused (Wiki.js, Nextcloud, Rocket.Chat) kasutavad AD kontosid.</li></ul></div>
-      <div class="term-row"><span class="t">Võrguprojekt · OPNsense</span><span class="d">töös</span>
-        <ul><li>Kolme asukohaga ettevõtte arvutivõrgu kavandamine: IP-plaan, VLAN-id, seadmete valik, eelarve ja riskianalüüs ning töötav näidislahendus tulemüürireeglite ja VPN-iga.</li></ul></div>
+      <div class="cv-row"><span class="t">Circle K · Klienditeenindaja</span><span class="d">06.2026 – 08.2026</span>
+        <ul><li>Klienditeenindus ja kassatöö, kauba väljapanek ja poe korrashoid; iseseisev töö kiires keskkonnas.</li></ul></div>
+      <div class="cv-row"><span class="t">Vembu-Tembumaa · Atraktsioonide operaator</span><span class="d">07.2025 – 08.2025</span>
+        <ul><li>Atraktsioonide käitamine ja külastajate ohutuse tagamine; meeskonnatöö kiire tempoga hooajal.</li></ul></div>
     </div>
-    <div class="term-sec">
-      <h3>TÖÖKOGEMUS</h3>
-      <div class="term-row"><span class="t">Kohila Vallavalitsus · IT-praktikant</span><span class="d">11.2026 – praegu</span>
-        <ul><li>Tegelen valla IT- ja võrguülesannetega; paigaldan ja seadistan Ubiquiti WiFi pääsupunkte.</li></ul></div>
-      <div class="term-row"><span class="t">Circle K · Klienditeenindaja</span><span class="d">06.2026 – 08.2026</span>
+    <div class="cv-sec">
+      <h3>Projektid</h3>
+      <div class="cv-row"><span class="t">Windowsi domeen ja failiserver · Windows Server</span><span class="d">2026</span>
         <ul>
-          <li>Teenindasin kliente kassas ning nõustasin toodete ja teenuste küsimustes.</li>
-          <li>Vastutasin kauba väljapaneku, riiulite täitmise ja poe korrashoiu eest.</li>
-          <li>Töötasin iseseisvalt kiires ja pingerikkas keskkonnas.</li>
+          <li>Active Directory domeen koos domeenikontrolleri, failiserveri, ruuteri ja haldusarvutiga.</li>
+          <li>OU-struktuur, kasutajad ja grupid osakondade kaupa; osakonnapõhised kaustaõigused.</li>
+          <li>Võrgukettad rühmapoliitikaga (GPO); DHCP, NAT ja sertifitseerimiskeskus (AD CS).</li>
         </ul></div>
-      <div class="term-row"><span class="t">Vembu-Tembumaa · Atraktsioonide operaator</span><span class="d">07.2025 – 08.2025</span>
-        <ul>
-          <li>Valmistasin ette ja käitasin laste atraktsioone ning tagasin külastajate ohutuse.</li>
-          <li>Suhtlesin iga päev laste ja peredega ning töötasin meeskonnas kiire tempoga hooajal.</li>
-        </ul></div>
+      <div class="cv-row"><span class="t">Infosüsteem ettevõttele Eesti AS · Linux/BSD</span><span class="d">2026</span>
+        <ul><li>OPNsense tulemüür, Samba AD domeenikontroller ja failiserver; Windows 11 tööjaam ning Wiki.js, Nextcloud ja Rocket.Chat AD kontodega üle LDAP-i.</li></ul></div>
+      <div class="cv-row"><span class="t">Kolme asukohaga ettevõtte võrk · OPNsense</span><span class="d">töös</span>
+        <ul><li>IP-plaan, VLAN-id, seadmete valik, eelarve ja riskianalüüs; näidislahendus tulemüürireeglite, OpenVPN-i ja IPsec-iga.</li></ul></div>
     </div>
-    <div class="term-sec">
-      <h3>OSKUSED</h3>
-      <dl class="term-kv">
-        <dt>Operatsioonisüsteemid</dt><dd>Windows, Windows Server, Linux (Ubuntu, Debian, CentOS)</dd>
-        <dt>Võrgud</dt><dd>OPNsense, DHCP, DNS, NAT, VLAN, VPN, Ubiquiti WiFi</dd>
-        <dt>Haldus</dt><dd>Active Directory, Samba AD, LDAP, rühmapoliitikad, kasutajahaldus, failiserver</dd>
+    <div class="cv-sec">
+      <h3>Haridus</h3>
+      <div class="cv-row"><span class="t">Tartu Rakenduslik Kolledž · IT-süsteemide spetsialist</span><span class="d">2024 – praegu</span></div>
+      <div class="cv-row"><span class="t">Kohila Gümnaasium</span><span class="d">2015 – 2024</span></div>
+    </div>
+    <div class="cv-sec">
+      <h3>Oskused</h3>
+      <dl class="cv-kv">
+        <dt>Võrgud</dt><dd>OPNsense, Ubiquiti UniFi, DHCP, DNS, NAT, VLAN, VPN, kaabeldus</dd>
+        <dt>Süsteemid</dt><dd>Windows Server, Windows 11, Linux</dd>
+        <dt>Haldus</dt><dd>Active Directory, Samba AD, LDAP, rühmapoliitikad, failiserver</dd>
         <dt>Virtualiseerimine</dt><dd>Proxmox, Xen Orchestra, VMware</dd>
-        <dt>Muu</dt><dd>PuTTY, riistvara, klienditeenindus, meeskonnatöö</dd>
         <dt>Keeled</dt><dd>eesti keel (emakeel), inglise keel (B2)</dd>
         <dt>Juhiluba</dt><dd>B-kategooria</dd>
       </dl>
     </div>
-    <p class="ps"><b>janre@portfolio</b>:~$ <a href="Janre_Puuorg_CV.pdf" download>laadi alla Janre_Puuorg_CV.pdf</a> <span class="cursor" aria-hidden="true"></span></p>
   </div>
 </dialog>
 
@@ -706,8 +626,9 @@ dialog.viewer .btn { padding: 7px 12px; }
 </dialog>
 <script>
 (function () {
-  var d = document.getElementById('viewer'), img = document.getElementById('viewer-img'), cap = document.getElementById('viewer-cap');
-  var group = [], gi = 0, cnt = document.getElementById('viewer-count');
+  // pildivaatur
+  var d = document.getElementById('viewer'), img = document.getElementById('viewer-img'), cap = document.getElementById('viewer-cap'), cnt = document.getElementById('viewer-count');
+  var group = [], gi = 0;
   function show(i) {
     gi = (i + group.length) % group.length; var b = group[gi];
     img.src = b.dataset.full; img.alt = b.dataset.cap; cap.textContent = b.dataset.cap;
@@ -725,65 +646,39 @@ dialog.viewer .btn { padding: 7px 12px; }
   d.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') show(gi - 1); if (e.key === 'ArrowRight') show(gi + 1); });
   document.getElementById('viewer-close').addEventListener('click', function () { d.close(); });
   d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+
+  // CV
   var cv = document.getElementById('cv');
   document.querySelectorAll('[data-cv]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       if (!cv.showModal) return;
-      e.preventDefault(); cv.showModal(); cv.querySelector('.term-body').scrollTop = 0;
+      e.preventDefault(); cv.showModal(); cv.querySelector('.cv-body').scrollTop = 0;
     });
   });
   document.getElementById('cv-close').addEventListener('click', function () { cv.close(); });
   cv.addEventListener('click', function (e) { if (e.target === cv) cv.close(); });
-  var tFill = document.getElementById('trace-fill'), tPkt = document.getElementById('trace-pkt'), tPct = document.getElementById('trace-pct'), edge = document.getElementById('edge');
-  var hops = Array.prototype.slice.call(document.querySelectorAll('.hop'));
-  function placeHops() {
-    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
-    hops.forEach(function (a) {
-      var t = a.dataset.t, el = document.getElementById(t), y = 0;
-      if (t !== 'top' && el && max > 0) y = Math.min(1, Math.max(0, (el.getBoundingClientRect().top + h.scrollTop - 80) / max));
-      a.dataset.y = y; a.style.setProperty('--y', (y * 100) + '%');
-    });
-  }
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
-  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+
+  // aktiivne menüülink
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
   function onScroll() {
-    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
-    var f = max > 0 ? Math.min(1, h.scrollTop / max) : 0, pc = (f * 100) + '%';
-    tFill.style.height = pc; tPkt.style.top = pc; edge.style.height = pc;
-    tPct.textContent = Math.round(f * 100) + '%';
-    var last = 0;
-    hops.forEach(function (a, i) { if (f + 0.002 >= parseFloat(a.dataset.y || 0)) last = i; });
-    hops.forEach(function (a, i) { a.classList.toggle('done', i <= last); a.classList.toggle('now', i === last); });
-    var cur = -1;
-    secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < 140) cur = i; });
-    links.forEach(function (a, i) { a.classList.toggle('active', i === cur); });
+    var cur = null;
+    document.querySelectorAll('main section').forEach(function (s) { if (s.getBoundingClientRect().top < 140) cur = s.id; });
+    links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
   }
-  placeHops();
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', function () { placeHops(); onScroll(); });
-  window.addEventListener('load', function () { placeHops(); onScroll(); });
-  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-
-  // tmux kell
-  var clk = document.getElementById('clock');
-  function tick() { try { clk.textContent = new Date().toLocaleTimeString('et-EE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Tallinn' }) + ' · Eesti'; } catch (e) {} }
-  tick(); setInterval(tick, 30000);
-
-  // oskused -> projektid
-  var out = document.getElementById('skill-out');
-  var outQ = out.querySelector('.q'), outR = out.querySelector('.res');
+  // oskused -> kus kasutatud
+  var hint = document.getElementById('skill-hint');
   function flash(el) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
   document.querySelectorAll('.skill').forEach(function (b) {
     function pick() {
       document.querySelectorAll('.skill').forEach(function (x) { x.classList.toggle('on', x === b); });
-      outQ.textContent = '"' + b.textContent + '"';
-      outR.innerHTML = '';
+      hint.textContent = b.textContent + ':';
       b.dataset.p.split(' ').forEach(function (id) {
         var el = document.getElementById(id); if (!el) return;
         var a = document.createElement('a'); a.href = '#' + id; a.textContent = el.dataset.name;
         a.addEventListener('click', function () { setTimeout(function () { flash(el); }, 350); });
-        outR.appendChild(a);
+        hint.appendChild(a);
       });
     }
     b.addEventListener('mouseenter', pick); b.addEventListener('focus', pick); b.addEventListener('click', pick);
@@ -800,61 +695,10 @@ dialog.viewer .btn { padding: 7px 12px; }
         var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
         say('Valitud, vajuta Ctrl+C');
       }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(v).then(function () { say('Kopeeritud: ' + v); }, fallback);
-      } else fallback();
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(function () { say('Kopeeritud: ' + v); }, fallback);
+      else fallback();
     });
   });
-  // teema valik
-  var colors = { cyan: '#4fd6e8', amber: '#f0b04c', violet: '#a99bff', rose: '#ff8fb8' };
-  var root = document.documentElement, favicon = document.getElementById('favicon');
-  function favSvg(c) {
-    return 'data:image/svg+xml,' + encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='#0a0f1c'/><rect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='" + c + "' stroke-width='3'/><text x='32' y='43' text-anchor='middle' font-family='Consolas,Menlo,monospace' font-size='28' font-weight='700' fill='" + c + "'>JP</text></svg>");
-  }
-  function setTheme(name, save) {
-    if (!colors[name]) name = 'cyan';
-    if (name === 'cyan') root.removeAttribute('data-accent'); else root.setAttribute('data-accent', name);
-    document.querySelectorAll('.sw').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.a === name)); });
-    if (favicon) favicon.href = favSvg(colors[name]);
-    if (save) { try { localStorage.setItem('jp-accent', name); } catch (e) {} }
-  }
-  setTheme(root.getAttribute('data-accent') || 'cyan', false);
-  document.querySelectorAll('.sw').forEach(function (b) { b.addEventListener('click', function () { setTheme(b.dataset.a, true); }); });
-
-  // võrgu animatsioon hero taustal
-  var cvs = document.getElementById('net');
-  if (cvs && cvs.getContext) {
-    var ctx = cvs.getContext('2d'), pts = [], W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2), running = true;
-    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function size() {
-      var r = cvs.getBoundingClientRect(); W = r.width; H = r.height;
-      cvs.width = W * dpr; cvs.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var n = Math.round(Math.min(70, W * H / 14000));
-      pts = [];
-      for (var i = 0; i < n; i++) pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25 });
-    }
-    function draw() {
-      var c = getComputedStyle(root).getPropertyValue('--accent').trim() || '#4fd6e8';
-      ctx.clearRect(0, 0, W, H);
-      for (var i = 0; i < pts.length; i++) {
-        var p = pts[i];
-        if (!still) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1; }
-        for (var j = i + 1; j < pts.length; j++) {
-          var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = dx * dx + dy * dy;
-          if (d < 15000) { ctx.globalAlpha = (1 - d / 15000) * .35; ctx.strokeStyle = c; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
-        }
-        ctx.globalAlpha = .7; ctx.fillStyle = c; ctx.beginPath(); ctx.arc(p.x, p.y, 1.6, 0, 6.283); ctx.fill();
-      }
-      ctx.globalAlpha = 1;
-      if (running && !still) requestAnimationFrame(draw);
-    }
-    size(); draw();
-    window.addEventListener('resize', function () { size(); if (still) draw(); });
-    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) {
-      var vis = e[0].isIntersecting; if (vis && !running) { running = true; draw(); } running = vis;
-    }).observe(cvs);
-    document.querySelectorAll('.sw').forEach(function (b) { b.addEventListener('click', function () { if (still) draw(); }); });
-  }
 })();
 </script>
 </body>
